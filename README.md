@@ -32,9 +32,6 @@ plt.show()
 
 ```
 
-### Results
-![Visualization of The Top Skills](3_Project\images\output1.png)
-
 ### Insights
 
 - SQL is the most requested skill for Data Analysts and Data Scientists, with it in over half the job postings for both roles. For Data Engineers, Python is the most sought-after skill, appearing in 68% of job postings.
