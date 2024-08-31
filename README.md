@@ -33,7 +33,7 @@ plt.show()
 ```
 
 ### Results
-![Visualization of The Top Skills](3_Project\images\Skill_Demand_all_Data.png)
+![Visualization of The Top Skills](3_Project\images\output1.png)
 
 ### Insights
 
