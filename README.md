@@ -66,3 +66,5 @@ for i in range(5):
     plt.text(11.2 , df_plot.iloc[-2,i] ,df_plot.columns[i])
 
 ```
+
+![Result](3_Project\images\output2.png)
