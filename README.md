@@ -43,3 +43,26 @@ plt.show()
 ### To find how skills are trending in 2023 for Data Analysts, I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
 
 View my notebook with detailed steps here: [Skills_Trend](3_Project/Skills_Trend.ipynb)
+
+## Visualize Data
+``` 
+df_plot= df_UK_perc.iloc[: , :5]
+
+sns.lineplot(data=df_plot ,dashes=False , palette='plasma')
+sns.set_theme(style='ticks')
+sns.despine()
+
+plt.title('Trending Top Skills for Data Analyst for UK')
+plt.ylabel('Likelihood in Job Postings')
+plt.xlabel('')
+plt.legend().remove()
+plt.tight_layout()
+
+from matplotlib.ticker import PercentFormatter
+ay= plt.gca()
+ay.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+for i in range(5):
+    plt.text(11.2 , df_plot.iloc[-2,i] ,df_plot.columns[i])
+
+```
