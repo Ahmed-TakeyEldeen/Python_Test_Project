@@ -45,7 +45,7 @@ plt.show()
 View my notebook with detailed steps here: [Skills_Trend](3_Project/Skills_Trend.ipynb)
 
 ## Visualize Data
-``` 
+``` python
 df_plot= df_UK_perc.iloc[: , :5]
 
 sns.lineplot(data=df_plot ,dashes=False , palette='plasma')
