@@ -67,4 +67,4 @@ for i in range(5):
 
 ```
 
-![Result](3_Project\images\output2.png)
+![Result](3_Project%5Cimages%5Coutput2.png)
