@@ -97,5 +97,4 @@ ticks_x = plt.FuncFormatter(lambda y, pos :f'${int(y/1000)}K')
 plt.gca().xaxis.set_major_formatter(ticks_x)
 plt.show()
 ```
-Result
 ![Boxplot](3_Project/images/output3.png)
