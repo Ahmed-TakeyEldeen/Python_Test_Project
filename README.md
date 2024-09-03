@@ -98,3 +98,31 @@ plt.gca().xaxis.set_major_formatter(ticks_x)
 plt.show()
 ```
 ![Boxplot](3_Project/images/output3.png)
+
+
+## Highest Paid & Most Demanded Skills for Data Analysts
+
+### Next, I narrowed my analysis and focused only on data analyst roles. I looked at the highest-paid skills and the most in-demand skills. I used two bar charts to showcase these.
+
+### Visualize Data
+``` Python
+fig ,ax = plt.subplots(2,1)
+
+sns.set_theme(style='ticks')
+sns.barplot(data=df_US_median , x='median',y=df_US_median.index , ax=ax[0],palette='dark:b')
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x , pos: f'${int(x/1000)}K'))
+ax[0].set_title('Top 10 Highest Paid Skills For Data Analyst')
+ax[0].set_ylabel('')
+ax[0].set_xlabel('')
+
+
+sns.barplot(data=df_US_count , x='median', y=df_US_count.index ,ax=ax[1], palette='light:b_r')
+ax2 = plt.FuncFormatter(lambda y, pos :f'${int(y/1000)}K')
+plt.gca().xaxis.set_major_formatter(ax2)
+plt.xlim(0,220000)
+plt.title('Top 10 Most IN-Demand Skills for Data Analayst')
+plt.ylabel('')
+plt.xlabel('Median Salary (USD)')
+plt.tight_layout()
+``` 
+![Paid_Skills](3_Project/images/output4.png)
