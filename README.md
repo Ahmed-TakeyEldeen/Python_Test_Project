@@ -76,3 +76,26 @@ for i in range(5):
 - SQL remains the most consistently demanded skill throughout the year, although it shows a gradual decrease in demand.
 - Excel experienced a significant increase in demand starting around September, surpassing both Python and Tableau by the end of the year.
  - Both Python and Tableau show relatively stable demand throughout the year with some fluctuations but remain essential skills for data analysts. Power BI, while less demanded compared to the others, shows a slight upward trend towards the year's end.
+
+
+## 3. How well do jobs and skills pay for Data Analysts?
+### To identify the highest-paying roles and skills, I only got jobs in the United States and looked at their median salary. But first I looked at the salary distributions of common data jobs like Data Scientist, Data Engineer, and Data Analyst, to get an idea of which jobs are paid the most.
+
+View my notebook with detailed steps here:[Salary_analysis](3_Project/Salary_analysis.ipynb)
+
+### Visualize Data 
+
+``` Python
+sns.boxplot(data=df_US_top6 , x='salary_year_avg',y='job_title_short' , order=job_order)
+sns.set_theme(style='ticks')
+
+plt.title('Salary Year AVG on Data Jobs')
+plt.xlabel('Yearly Salary (USD)')
+plt.ylabel('')
+plt.xlim(0,600000)
+ticks_x = plt.FuncFormatter(lambda y, pos :f'${int(y/1000)}K')
+plt.gca().xaxis.set_major_formatter(ticks_x)
+plt.show()
+```
+Result
+![Boxplot](3_Project/images/output3.png)
